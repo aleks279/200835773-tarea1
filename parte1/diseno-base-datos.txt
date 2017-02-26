@@ -1,0 +1,72 @@
+Duelo
+- jugadores (2)
+- rating
+- duracion
+- cartas_usadas
+- turnos
+
+Turno
+- Fase
+  - nombre
+  - Paso
+    - nombre
+    - accion_disponible
+
+IntercambioCarta
+- Tipo (compra/venta)
+- Fecha
+- cartas_intercambiadas
+- razon_cambio
+
+Baraja
+- cartas (40~60)
+- color
+  - descripcion
+
+Jugador
+- Nombre
+- email
+- password
+- username (nickname)
+- baraja (1)
+- cartas (n)
+- mano
+  - cartas (7)
+- cementerio
+  - cartas (n)
+- puntos_vida
+- contadores_veneno
+
+Color
+- Nombre
+- Descripcion
+
+Carta
+- color_id
+- descripcion
+- requirement
+  - color
+  - cant_tierras
+- image_path
+  * Tierras
+    - tipo
+    - mana-production
+  * Hechizo
+    - effect
+  * Instantaneo
+    - effect
+  * Encantamiento
+    - effect
+  * Artefacto
+    - Tipo
+    - effect
+  * Criatura
+    - ataque
+    - defensa
+    - habilidad
+      - descripcion
+  * Planeswalker
+    - contadores_lealtad
+    - habilidad_lealtad
+      - description
+      - effect
