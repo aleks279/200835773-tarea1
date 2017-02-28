@@ -34,10 +34,38 @@ El objetivo principal de esta tarea es la introducci\'on al an\'alisis de bases 
 En la primera parte, se desarrolla un modelo de base de datos relacional para una base de datos encargada de organizar duelos del conocido juego de cartas \emph{Magic The Gathering}.
 
 \subsection{Parte 2}
-La segunda parte consiste en el an\'alisis de una base de datos existente. Utilizando la base de datos p\'ublica prove\'ida por el profesor, '
+La segunda parte consiste en el an\'alisis de una base de datos existente. Utilizando la base de datos p\'ublica prove\'ida por el profesor, se debe realizar un modelo de base de datos entidad-relaci\'on de la misma, junto con una serie de consultas SQL.
+
+Adem\'as se pide la implementaci\'on de un cliente en consola escrito con el lenguaje Perl para GNU\/Linux con las siguientes funcionalidades:
+\begin{itemize}
+  \item Realizar consultas a \texttt{https://www.wikileaks.org/hackingteam/emails/}
+  \item Parsear los resultados de las consultas a un documento CSV.
+  \item Permitir realizar consultas por:
+  \begin{itemize}
+    \item Palabra en el correo.
+    \item Correo de env\'io.
+    \item Correo de recibido.
+  \end{itemize}
+  \item Permitir realizar b\'usquedas dada una expresi\'on regular utilizando los tipos de consulta anteriores.
+  \item Utilizar la biblioteca \emph{GetOps} para estilizar el comando de b\'usqueda en consola.
+\end{itemize}
 
 \section{Ambiente de desarrollo}
-Para el realizar el modelo de base de datos entidad-relaci\'on de \emph{Magic The Gathering}, se utilizo la herramienta \emph{StarUML} para generar el diagrama UML. Dicha herramienta tambi\'en se utiliz\'o para realizar el diagrama de base de datos entidad-relaci\'on de la base de datos compartida.'
+Para la elaboraci\'on de los diagramas de entidad-relaci\'on de bases de datos solicitados se utiliz\'o la siguiente herramienta:
+\begin{itemize}
+  \item StarUML v2.8.0
+\end{itemize}
+
+Para la elaboraci\'on de consultas SQL se hizo uso de la siguiente herramienta:
+\begin{itemize}
+  \item MySQL community for Windows v5.7.17
+\end{itemize}
+Todo ejecutado sobre un sistema operativo Windows 10 Home Edition x64.
+
+Para la elaboraci\'on del cliente de consultas de Perl, se utilizo el siguiente ambiente:
+\begin{itemize}
+  \item
+\end{itemize}
 
 \section{Estructuras de datos usadas y funciones}
 
@@ -47,9 +75,16 @@ Para el realizar el modelo de base de datos entidad-relaci\'on de \emph{Magic Th
 \begin{itemize}
   \item 25-02-2017:
   \begin{itemize}
-    \item 1.5 horas - modelado de base de datos de Magic (texto).
-    \item 2 horas   - modelado de base de datos de Magic (StarUML).
-    \item 0.5 horas - documentaci\'on.
+    \item 1 hora - modelado de base de datos de Magic (texto).
+    \item 1.5 horas - modelado de base de datos de Magic (StarUML).
+    \item 1 hora - instalaci\'on y configuraci\'on de MySQL en Windows.
+    \item 3 horas - investigaci\'on sobre cliente en Perl. Consultas a Wikileaks.
+    \item 1 hora - investigaci\'on de GetOps en Perl.
+    \item 1 hora - documentaci\'on.
+  \end{itemize}
+  \item 27-02-2017:
+  \begin{itemize}
+    \item 1 hora - primer intento al cliente en Perl.
   \end{itemize}
 \end{itemize}
 
@@ -63,5 +98,6 @@ Para el realizar el modelo de base de datos entidad-relaci\'on de \emph{Magic Th
 
 \begin{thebibliography}{99}
  \bibitem{magic} Cómo jugar magic the gathering. Retrieved February 25, 2017, from  \texttt{http://es.wikihow.com/jugar-Magic-The-Gathering}
+ \bibitem{getops} Getopt:Long. Retrieved February 26, 2017, from \texttt{http://perldoc.perl.org/Getopt/Long.html}
 \end{thebibliography}
 \end{document}
