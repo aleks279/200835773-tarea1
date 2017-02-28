@@ -3,6 +3,7 @@ use Getopt::Long;
 use CGI::Carp qw(fatalsToBrowser);
 use LWP::UserAgent;
 use HTTP::Request;
+use HTML::TableExtract;
 
 my $url = "https://www.wikileaks.org/hackingteam/emails/";
 my $query = "?q=&mfrom=%40\@gmail.com&mto=&title=&notitle=&date=&nofrom=&noto=&count=10000&sort=0#searchresult";
@@ -17,5 +18,18 @@ $request->content($query);
 my $response = $userAgent->request($request);
 my $content = $response->content();
 
-print "Content-type: text/html\n\n";
-print $content;
+my $te = HTML::TableExtract->new( headers => [qw(Date  Subject From  To)]);
+
+$te->parse($content);
+my $table = $te->tables;
+
+my $ts = $te->tables;
+
+foreach $ts ($te->tables) {
+  print "Table (", join(',', $ts->coords), "):\n";
+
+  my $row = $ts->rows;
+  foreach $row ($ts->rows) {
+    print join(',', @$row), "\n";
+  }
+}
