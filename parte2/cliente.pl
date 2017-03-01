@@ -18,7 +18,7 @@ $request->content($query);
 my $response = $userAgent->request($request);
 my $content = $response->content();
 
-my $te = HTML::TableExtract->new( headers => [qw(Date  Subject From  To)]);
+my $te = HTML::TableExtract->new( headers => [qw(Date From To)]);
 
 $te->parse($content);
 my $table = $te->tables;
@@ -26,10 +26,13 @@ my $table = $te->tables;
 my $ts = $te->tables;
 
 foreach $ts ($te->tables) {
-  print "Table (", join(',', $ts->coords), "):\n";
-
   my $row = $ts->rows;
+
+  open(my $output_file, '>', 'results.csv') or die 'Shit';
+  print $output_file "Date,From,To\n";
   foreach $row ($ts->rows) {
-    print join(',', @$row), "\n";
+    print $output_file join(',',@$row), "\n";
   }
+  close $output_file;
+  print "Finished!\n";
 }
