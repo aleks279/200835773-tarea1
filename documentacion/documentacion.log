@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.30)  25 FEB 2017 18:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.30)  27 FEB 2017 21:18
 entering extended mode
 **./documentacion.tex
 (documentacion.tex
@@ -261,35 +261,44 @@ G,.JBIG2,.JB2,.eps]
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 48.
+(Font)              <7> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 48.
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ³ in font ptmr7t!
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 65.
+(Font)              <5> on input line 41.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 41.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [1
+)
+Overfull \hbox (119.97598pt too wide) in paragraph at lines 41--42
+[]\OT1/ptm/m/n/10 Realizar con-sul-tas a \OT1/pcr/m/n/10 https://www.wikileaks.
+org/hackingteam/emails/ 
+ []
 
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
 
-]
-(documentacion.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+[]\OT1/ptm/m/n/8 Getopt:Long. Re-trieved Febru-ary 26, 2017, from
+ []
+
+[1
+
+] (documentacion.aux) ) 
 Here is how much of TeX's memory you used:
- 3653 strings out of 493335
- 57394 string characters out of 3136683
- 124089 words of memory out of 3000000
- 7169 multiletter control sequences out of 15000+200000
- 39143 words of font info for 71 fonts, out of 3000000 for 9000
+ 3655 strings out of 493335
+ 57414 string characters out of 3136683
+ 127092 words of memory out of 3000000
+ 7170 multiletter control sequences out of 15000+200000
+ 39658 words of font info for 73 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,10n,43p,338b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontnam
-e/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on documentacion.pdf (2 pages, 52615 bytes).
+ 40i,10n,43p,286b,220s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontn
+ame/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on documentacion.pdf (2 pages, 57455 bytes).
 PDF statistics:
  30 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
