@@ -1,7 +1,10 @@
-\documentclass{IEEEtran}
+\documentclass{article}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{listings}
+
+\let\<\textless
+\let\>\textgreater
 
 \graphicspath{ {images/} }
 \pagestyle{fancy}
@@ -64,17 +67,41 @@ Todo ejecutado sobre un sistema operativo Windows 10 Home Edition x64.
 
 Para la elaboraci\'on del cliente de consultas de Perl, se utilizo el siguiente ambiente:
 \begin{itemize}
-  \item
+  \item Perl v5.22.1 en el SO GNU/Linux Ubuntu 16.04 LTS
 \end{itemize}
 
 \section{Estructuras de datos usadas y funciones}
+Para el cliente en Perl se crearon dos rutinas principales:
+\begin{itemize}
+  \item \emph{printOptions()}: retorna la ayuda del programa (Acerca de...).
+  \item \emph{makeRequest()}: realiza la consulta deseada a WikiLeaks y adem\'as parsea los resultados a un archivo ``results.csv''.
+\end{itemize}
+
+Se utilizan las siguientes librer\'ias:
+\begin{itemize}
+  \item \emph{Getopt::Std} : obtiene y parsea las opciones de consola para realizar las consultas adecuadamente.
+  \item \emph{CGI::Carp} : captura de errores.
+  \item \emph{LWP::UserAgent} : para realizar consultas en navegadores.
+  \item \emph{HTTP::Request} : para realizar las consultas en s\'i.
+  \item \emph{HTML::TableExtract} : extraer y parsear tablas HTML con los resultados de las consultas.
+\end{itemize}
 
 \section{Instrucciones de ejecuci\'on'}
-Para la ejecuci\'on del cliente en Perl de la segunda parte, es necesario ejecutar el siguiente comando:
+Para la ejecuci\'on del cliente en Perl de la segunda parte, es necesario ejecutar el siguiente comando para instalar la librer\'ia \emph{HTML::TableExtract}:
 \begin{itemize}
-  \item \emph{sudo apt-get install libhtml-treebuilder-xpath-perl}
+  \item \emph{sudo apt-get install libhtml-treebuilder-xpath-perl} : paquete necesario para la extracci\'on de tablas en HTML.
 \end{itemize}
-El cual instala el paquete necesario para la extracci\'on de tablas en HTML.
+
+Para ejecutar el cliente se debe seguir los siguientes pasos:
+\begin{itemize}
+  \item Abrir una ventana de consola.
+  \item Navegar hasta el folder que contiene el archivo ``cliente.pl''.
+  \item Ejecutar el comando ``perl cliente.pl -t \<tipo-consulta\> \<texto\>'' donde:
+  \begin{itemize}
+    \item \emph{\<tipo-consulta\>} : puede ser ``email\_from'', ``email\_to'' o ``email\_content''.
+    \item \emph{\<texto\>} : si la primera opci\'on es ``email\_from'' o ``email\_to'', esta debe ser un email v\'alido o un dominio de email v\'alido. Si la primera opci\'on es ``email\_content'', esta ser\'a el texto a buscar en el cuerpo del email.
+  \end{itemize}
+\end{itemize}
 
 \section{Bit\'acora de trabajo}
 \begin{itemize}
@@ -96,14 +123,24 @@ El cual instala el paquete necesario para la extracci\'on de tablas en HTML.
   \begin{itemize}
     \item 2 horas - Remover cuerpo del email para evitar la salida desordenada. Agregar archivo de salida CSV.
   \end{itemize}
+  \item 01-03-2017:
+  \begin{itemize}
+    \item 4 horas - Agregar opciones a la aplicaci\'on de consola. Configurar los tipos de consulta en el cliente.
+    \item 1 hora - documentaci\'on.
+  \end{itemize}
 \end{itemize}
+Total de horas trabajadas: 18.5 horas.
 
 \section{Comentarios finales}
+\begin{itemize}
+  \item Debido al horario laboral, la falta de tiempo fue una limitante y no fue posible realizar las consultas sobre la base de datos MySQL de la tarea.
+  \item El cliente de Perl realiza exitosamente las consultas por ``email\_from'' e ``email\_to''; la consulta por texto cualquiera est\'a correctamente estructurada, seg\'un lo demostraron pruebas en browser, pero a\'un as\'i no retorna resultados.
+\end{itemize}
 
 \section{Conclusiones}
-
 \begin{itemize}
-  \item 
+  \item Perl es un lenguaje muy \'util a la hora de manipular grandes cantidades de informaci\'on de texto, como lo es el HTML.
+  \item Analizar el trabajo realizado por otros, como la base de datos MySQL de esta tarea, es un trabajo tedioso y lento el cual requiere tiempo.
 \end{itemize}
 
 \begin{thebibliography}{99}
