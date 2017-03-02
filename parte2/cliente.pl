@@ -20,7 +20,6 @@ if (defined $options{t}) {
   } elsif ( $options{t} eq "email_content") {
     my $text = join('+', @ARGV);
     $query_params = "?q=$text&mfrom=&mto=&title=&notitle=&date=&nofrom=&noto=&count=10000&sort=0#searchresult";
-    print $query_params, "\n";
     makeRequest();
   } else {
     printOptions();
